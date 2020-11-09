@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lato&display=swap');
+
+* {
+    --white: #fff;
+    --offwhite: #e9eeee;
+    --offwhite2: #eee;
+    --grey1: #ccc;
+    --grey3: #999;
+    --grey4: #777;
+    --bluegreen: #ffca4f;
+}
+body {
+    background-image: linear-gradient(var(--white), var(--grey1));
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: center;
+}
+.title {
+    text-align: center;
+    font-size: 3em;
+    color: var(--grey4);
+}
+
+.title-img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.menu {
+    background-color: var(--grey4);
+    display: flex;
+    justify-content: center;
+}
+.menu-title {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: var(--white);
+    cursor: pointer;
+    padding: 2px;
+}
+.menu-title:hover {
+    color: var(--bluegreen);
+}
+
+.menu-title_words {
+    margin-left: 0.1em;
+}
+
+.fa-plus-square {
+    font-size: 1em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(1, fr);
+    width: min-content;
+    height: min-content;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    border-radius: 15px;
+    box-shadow: var(--grey1) 1px 1px 5px;
+    width: 300px;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    cursor: move;
+    transition: transform 0.1s linear;
+}
+
+.grid-item:hover {
+    background-color: var(--offwhite2);
+}
+
+.book-title {
+    font-size: 2em;
+    font-family: 'Amatic SC', cursive;
+    margin: 10px 0;
+}
+
+.book-info {
+    list-style: none;
+    padding-left: 5px;
+    margin: 10px 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.fa-trash-alt {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+
+.fa-trash-alt:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+.draggingover {
+    background-color:var(--offwhite);
+    border-color: var(--grey3);
+    transform: scale(97%);
+    transition: transform 0.15s linear;
+}
