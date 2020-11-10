@@ -12,13 +12,32 @@
         <h1 class="title">My Library</h1>
         <img src="assets/img/library.svg" alt="library-logo" class='title-img'>
     </header>
-    <nav class='menu'>
-        <h2 class='menu-title'>
-            <i class="fas fa-plus-square"></i>
-            <span class='menu-title_words'>Add new book</span>
-        </h2>
-    </nav>
-    <div class="grid-container" id = "drop-zone"></div>
+    <main class="relative">
+        <nav class='menu'>
+            <h2 class='menu-title'>
+                <i class="fas fa-plus-square"></i>
+                <span class='menu-title_words'>Add a new book</span>
+            </h2>
+        </nav>
+        <section class='emerging-window hidden'>
+            <h3 class="new-book">Add a new book</h3>
+            <form action="#" class="new-book_form" id='add-book_form'>
+                    <label for="form-title" class='form-label'>Title</label>
+                    <input type="text" class="form-title" id="form-title" required>
+                    <label for="form-author" class='form-label'>Author</label>
+                    <input type="text" class="form-author" id="form-author" required>
+                    <label for="form-pages" class='form-label'>Number of pages</label>
+                    <input type="number" class="form-pages" id="form-pages" required>
+                <div class='form-field'>
+                    <label for="form-read" class='form-label'>Did you read it?</label>
+                    <input type="checkbox" class="form-read" id="form-read">
+                </div>
+                <button class="form-button" id='form-button'>Add book</button>
+                <i class="fas fa-times"></i>
+            </form>
+        </section>
+        <section class="grid-container" id = "drop-zone"></section>
+    </main>
     <script src='assets/js/script.js'></script>
     <script src="https://kit.fontawesome.com/b906595944.js" crossorigin="anonymous"></script>    
 </body>

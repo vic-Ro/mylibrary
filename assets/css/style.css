@@ -4,13 +4,14 @@
     --white: #fff;
     --offwhite: #e9eeee;
     --offwhite2: #eee;
+    --offwhite3: #fadfdf;
     --grey1: #ccc;
     --grey3: #999;
     --grey4: #777;
     --bluegreen: #ffca4f;
 }
 body {
-    background-image: linear-gradient(var(--white), var(--grey1));
+    background-image: linear-gradient(var(--white), var(--offwhite2));
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
 }
@@ -112,9 +113,98 @@ body {
 .dragging {
     opacity: 0.5;
 }
+
 .draggingover {
     background-color:var(--offwhite);
     border-color: var(--grey3);
-    transform: scale(97%);
+    transform: scale(0.97);
     transition: transform 0.15s linear;
+}
+
+.emerging-window {
+    background-color:var(--grey3);
+    border-radius: 25px;
+    border: 1px solid var(--grey4);
+    box-shadow: var(--grey4) 1px 1px 5px;
+    width: 300px;
+    height: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 20px;
+    z-index: 200;
+}
+
+.new-book {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.8em;
+    color: var(--white);
+    margin: 0;
+}
+
+.new-book_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-book_form > input {
+    margin: 5px 0;
+}
+
+.form-label {
+    font-size: 1em;
+    color: var(--white);
+}
+.form-field {
+    display: flex;
+    flex-direction: row;
+}
+.form-read {
+    margin-left: 10px;
+}
+
+.form-button {
+    width: 100px;
+    height: 40px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    border: 1px solid var(--grey4);
+}
+.fa-times {
+    text-align: right;
+    margin: 0;
+    cursor: pointer;
+    color: var(--grey4);
+}
+.fa-times:hover {
+    text-align: right;
+    margin: 0;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.hidden {
+    visibility: hidden; /*TODO check this property in js */
+}
+
+.read-button {
+    margin: 10px 0;
+    width: 90px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--grey1) 1px 1px 5px;
+    cursor: pointer;
+}
+
+.read {
+    background-color: var(--offwhite);
+}
+
+.not-read {
+    background-color: var(--offwhite3);
 }
