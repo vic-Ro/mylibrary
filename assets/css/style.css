@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lato&display=swap');
 
 * {
+    --darkgrey: #444;
+	--github: #24292e;
+    --grey: #414f5b;
+	--hoverLink: #f55;
+    --layout: #e6e6e6;
+	--linkedin: #0e76a8;
     --white: #fff;
     --offwhite: #e9eeee;
     --offwhite2: #eee;
@@ -66,6 +72,25 @@ body {
     margin: 20px auto;
     grid-gap: 10px;
 }
+@media (max-width: 1275px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(1, fr);
+    }
+}
+
+@media (max-width: 950px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(1, fr);
+    }
+}
+@media (max-width: 650px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(1, fr);
+    }
+}
 
 .grid-item {
     border-radius: 15px;
@@ -129,10 +154,8 @@ body {
     width: 300px;
     height: 320px;
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     margin: auto;
     padding: 20px;
     z-index: 200;
@@ -207,4 +230,66 @@ body {
 
 .not-read {
     background-color: var(--offwhite3);
+}
+
+
+/*********FOOTER***********/
+.footer {
+	background-color:var(--white);
+    border-top: 5px solid var(--grey4);
+    bottom: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
+@media (max-width:630px) {
+	.footer {
+		grid-template-columns: 1fr;
+    }
+    .controls {
+        margin: 5px auto 220px;
+    }
+}
+.footer__item {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1rem;
+	width: 100%;
+}
+.footer__item:nth-child(3) {
+	justify-self: center;
+	max-width: 300px;
+}
+.footer__logo {
+	height: 40px;
+	padding-right: 0.3rem;
+}
+
+.fa-linkedin {
+    color: var(--linkedin);
+    font-size: 2.5em;
+	padding: 5px;
+}
+.fa-github-square {
+    color: var(--github);
+    font-size: 2.5em;
+	padding: 5px;
+}
+.fa-envelope-square {
+    color: var(--darkgrey);
+    font-size: 2.5em;
+	padding: 5px;
+}
+.fa-linkedin:hover, .fa-github-square:hover, .fa-envelope-square:hover {
+	color: var(--hoverLink);
+	transition: 0.3s;
+}
+.madeby {
+	max-width: 150px;
+	padding: 10px;
 }
