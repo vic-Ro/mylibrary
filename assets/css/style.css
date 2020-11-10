@@ -36,6 +36,19 @@ body {
     margin-left: 10px;
 }
 
+@media (max-width:650px) {
+    .title {
+        text-align: center;
+        font-size: 2em;
+        color: var(--grey4);
+    }
+    
+    .title-img {
+        width: 40px;
+        margin-left: 10px;
+    }
+}
+
 .menu {
     background-color: var(--grey4);
     display: flex;
@@ -89,6 +102,7 @@ body {
     .grid-container {
         grid-template-columns: repeat(1, 300px);
         grid-template-rows: repeat(1, fr);
+        margin: 20px auto 250px;
     }
 }
 
@@ -196,6 +210,7 @@ body {
     margin: 10px auto 0;
     border-radius: 10px;
     border: 1px solid var(--grey4);
+    background-color: var(--grey1);
 }
 .fa-times {
     text-align: right;
@@ -245,9 +260,9 @@ body {
     position: fixed;
     width: 100%;
 }
-@media (max-width:630px) {
+@media (max-width:650px) {
 	.footer {
-		grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     .controls {
         margin: 5px auto 220px;
