@@ -21,6 +21,12 @@ body {
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
 }
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+}
 .title {
     font-size: 3em;
     color: var(--grey4);
@@ -30,7 +36,6 @@ body {
 .title-img {
     width: 50px;
     margin-left: 10px;
-    display: inline;
 }
 
 @media (max-width:650px) {
