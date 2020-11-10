@@ -25,7 +25,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: max-content;
 }
 .title {
     font-size: 3em;
@@ -38,15 +37,15 @@ body {
 }
 
 @media (max-width:650px) {
+    .header {
+        height: 70px;
+    }
     .title {
-        text-align: center;
         font-size: 2em;
-        color: var(--grey4);
     }
     
     .title-img {
         width: 40px;
-        margin-left: 10px;
     }
 }
 
