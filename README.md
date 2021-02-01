@@ -2,9 +2,9 @@
 
 This is a project for the Odin Project [https://www.theodinproject.com/courses/javascript/lessons/library]
 
-Live demo: https://vic-ro.github.io/mylibrary/
+Live demo: https://vicromerodev.github.io/mylibrary/
 
-Github repository: https://github.com/vic-Ro/mylibrary/
+Github repository: https://github.com/vicromerodev/mylibrary/
 
 The idea of the project was to set up a Library where the user could add Books, introduce their information through a form,
 and display them in some sort of table or each on their own "card". The user had to be able to switch any book between
